@@ -41,7 +41,6 @@ The goal of this project is to spend **100 days** coding and improving my Python
 Here, I’ll be documenting my daily coding progress. Each day will have its own sub-folder with a Python file and additional resources (if applicable).
 
 - **Day 0**: [Intro & Setup](README.md)
-- **Day 1**: [Intro to Python & Variables](day-1/README.md)
 
 Check out each day's folder for the Python code, challenges, and notes!
 
