@@ -10,6 +10,7 @@ numbers = [1, 2, 3, 4, 5]
 mixed = [1, "two", 3.0, True]
 
 print("empty_list:", empty_list)
+
 print("numbers:", numbers)
 print("mixed:", mixed)
 
