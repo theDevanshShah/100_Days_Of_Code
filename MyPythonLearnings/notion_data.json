@@ -1,0 +1,33 @@
+{
+  "python-tips": {
+    "id": "python-tips",
+    "title": "Python Tips",
+    "created_at": "2025-08-21T18:27:02.872501",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "A few handy Python tips for your next video.",
+        "checked": false,
+        "language": ""
+      },
+      {
+        "type": "todo",
+        "content": "Record intro",
+        "checked": false,
+        "language": ""
+      },
+      {
+        "type": "todo",
+        "content": "Show examples",
+        "checked": true,
+        "language": ""
+      },
+      {
+        "type": "code",
+        "content": "def greet(name):\n\treturn f\"Hello, {name}!\"\n\nprint(greet('YouTube'))",
+        "checked": false,
+        "language": "python"
+      }
+    ]
+  }
+}
