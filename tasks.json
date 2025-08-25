@@ -4,5 +4,83 @@
     "name": "Drink Water",
     "done": true,
     "due": "2025-08-26"
+  },
+  {
+    "id": 2,
+    "name": "Plan 30-day content schedule",
+    "done": false,
+    "due": "2025-08-27"
+  },
+  {
+    "id": 3,
+    "name": "Create channel trailer / intro",
+    "done": false,
+    "due": "2025-08-29"
+  },
+  {
+    "id": 4,
+    "name": "Outline Day 1 video (script + shots)",
+    "done": false,
+    "due": "2025-08-26"
+  },
+  {
+    "id": 5,
+    "name": "Record Day 1 video",
+    "done": false,
+    "due": "2025-08-27"
+  },
+  {
+    "id": 6,
+    "name": "Edit Day 1 video",
+    "done": false,
+    "due": "2025-08-28"
+  },
+  {
+    "id": 7,
+    "name": "Publish Day 1 video (title, tags, thumbnail)",
+    "done": false,
+    "due": "2025-08-29"
+  },
+  {
+    "id": 8,
+    "name": "Create thumbnail template",
+    "done": false,
+    "due": "2025-08-30"
+  },
+  {
+    "id": 9,
+    "name": "Set up repo and examples for tutorials",
+    "done": false,
+    "due": "2025-08-31"
+  },
+  {
+    "id": 10,
+    "name": "Practice screen recording & audio setup",
+    "done": false,
+    "due": "2025-08-27"
+  },
+  {
+    "id": 11,
+    "name": "Write video descriptions and pinned comment template",
+    "done": false,
+    "due": "2025-08-29"
+  },
+  {
+    "id": 12,
+    "name": "Batch record 2-3 short tutorial clips",
+    "done": false,
+    "due": "2025-09-02"
+  },
+  {
+    "id": 13,
+    "name": "Review analytics for first video after 7 days",
+    "done": false,
+    "due": "2025-09-05"
+  },
+  {
+    "id": 14,
+    "name": "Schedule weekly editing time block",
+    "done": false,
+    "due": "2025-08-27"
   }
 ]
