@@ -27,10 +27,13 @@ def main():
             save_tasks(tasks)
         elif ch == "2":
             today = date.today().isoformat()
+            if not tasks:
+                print("No tasks.")
             for t in tasks:
-             overdue = (t["due"] and t["due"] < today and not t["done"])
-            status = "OVERDUE" if overdue else ("✓" if t["done"] else "✗")
-            print(f"{t['id']}. {t['name']} [{status}] due:{t['due']}")
+                due = t.get("due", "")
+                overdue = (due and due < today and not t["done"])
+                status = "OVERDUE" if overdue else ("✓" if t["done"] else "✗")
+                print(f"{t['id']}. {t['name']} [{status}] due:{due}")
         elif ch == "3":
             tid = int(input("Task id: "))
             for t in tasks:
