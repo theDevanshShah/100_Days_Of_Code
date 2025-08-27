@@ -19,7 +19,7 @@ from __future__ import annotations
 
 import argparse
 import math
-from typing import Iterable, List
+from typing import Iterator, List
 
 
 def list_examples() -> None:
@@ -40,7 +40,7 @@ def list_examples() -> None:
     print("Doubled (map + lambda):", doubled)
 
 
-def fibonacci_generator(n: int) -> Iterable[int]:
+def fibonacci_generator(n: int) -> Iterator[int]:
     """Yield first n Fibonacci numbers lazily.
 
     Demonstrates generators for large sequences without using lots of memory.
@@ -52,6 +52,9 @@ def fibonacci_generator(n: int) -> Iterable[int]:
 
 
 def show_fibonacci(n: int = 10) -> None:
+    if n <= 0:
+        print("No Fibonacci numbers to show for n<=0")
+        return
     print(f"First {n} Fibonacci numbers (generator):")
     for idx, v in enumerate(fibonacci_generator(n), 1):
         print(f"{idx}: {v}")
@@ -60,13 +63,14 @@ def show_fibonacci(n: int = 10) -> None:
 def sieve_primes(limit: int) -> List[int]:
     """Return primes up to limit using Sieve of Eratosthenes (inclusive).
 
-    Simple, fast enough for small demos.
+    Simple, fast enough for small demos. Uses math.isqrt for the loop bound.
     """
     if limit < 2:
         return []
     sieve = [True] * (limit + 1)
     sieve[0:2] = [False, False]
-    for p in range(2, int(math.sqrt(limit)) + 1):
+    # only need to check up to integer sqrt(limit)
+    for p in range(2, math.isqrt(limit) + 1):
         if sieve[p]:
             for multiple in range(p * p, limit + 1, p):
                 sieve[multiple] = False
@@ -120,6 +124,10 @@ def main() -> None:
     parser.add_argument("--n", type=int, default=10, help="Number used by some demos (like fib/primes)")
     args = parser.parse_args()
 
+    # Basic validation: n should be non-negative
+    if args.n < 0:
+        parser.error("--n must be non-negative")
+
     if args.demo in ("lists", "all"):
         print("\n--- List examples ---")
         list_examples()
@@ -130,7 +138,11 @@ def main() -> None:
 
     if args.demo in ("primes", "all"):
         print("\n--- Primes (sieve) ---")
-        print(sieve_primes(args.n))
+        primes = sieve_primes(args.n)
+        if primes:
+            print(", ".join(map(str, primes)))
+        else:
+            print("(no primes)")
 
     if args.demo in ("counter", "all"):
         print("\n--- Simple class & error handling ---")
