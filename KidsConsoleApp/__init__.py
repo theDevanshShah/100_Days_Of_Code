@@ -1,0 +1,1 @@
+# KidsConsoleApp package
