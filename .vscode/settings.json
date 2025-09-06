@@ -1,0 +1,21 @@
+{
+    "animations.CursorAnimation": true,
+    "animations.Active": "Scale",
+    "animations.CursorAnimationOptions": {
+        "Color": "#7733ff",
+        "TrailLength": 8
+    },
+    "animations.Durations": {
+        "Command-Palette": 200,
+        "Tabs": 200,
+        "Active": 200,
+        "Scrolling": 200,
+        "Smooth-Mode": 200,
+        "Focus-Dimming": 200
+    },
+    "animations.Default-Duration": 200,
+    "animations.Focus-Dimming-Mode": "Full Window",
+    "animations.UseCursorColorForCursorAnimation": true,
+    "workbench.sideBar.location": "left",
+    "zenMode.hideActivityBar": true
+}
