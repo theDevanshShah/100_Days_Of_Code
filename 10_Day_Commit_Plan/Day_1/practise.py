@@ -14,7 +14,7 @@ print("Hello \n World")
 print("1","2","3","4","5", sep=",")
 
 # 3 Print a table row: Name | Age | City without newlines.
-print("Name","Age","City","Gender", sep=" | ")
+print("Name","Age","City", sep=" | ")
 
 # 4 Print "She said "Python is fun"" using escape characters.
 print("She said \"Python is fun\"")
